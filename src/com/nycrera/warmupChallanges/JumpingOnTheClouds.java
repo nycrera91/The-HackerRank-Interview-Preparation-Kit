@@ -8,4 +8,27 @@ package com.nycrera.warmupChallanges;
  */
 
 public class JumpingOnTheClouds {
+
+    public static void main(String[] args) {
+
+        int[] arr = new int[]{0, 0, 1, 0, 0, 1, 0};
+        System.out.println(jumpingOnTheClouds(arr));
+    }
+
+    public static int jumpingOnTheClouds(int[] c) {
+
+        int jumpNumber = -1;
+        int size = c.length;
+
+        for(int i = 0; i < c.length; i++, jumpNumber++) {
+
+            if(i < size - 2 && c[i+2] == 0) {
+                i++;
+            }
+
+        }
+
+        return jumpNumber;
+    }
+
 }
